@@ -1,0 +1,23 @@
+name: PepeGram iOS CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  runner:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check macOS runner
+        run: |
+          sw_vers
+          xcodebuild -version
+          swift --version
+
+      - name: CI status
+        run: echo "Cloud Mac is ready"
