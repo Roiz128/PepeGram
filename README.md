@@ -1,6 +1,8 @@
-# PepeGram Plugin UI Starter
+# PepeGram iOS starter project
 
-Prototype of a plugin settings list and four-tap counter. Toggle states persist with UserDefaults.
+This is a minimal SwiftUI/Xcode starter so GitHub Actions can compile a basic iOS app.
 
+**It is not the original Telegram/PepeGram app and does not include your plugin implementation.** The plugin toggle and counter are demo UI only.
 
-**Not an IPA:** this is only a Swift source starter. Plugin code loading/execution is intentionally not included.
+## Build
+GitHub Actions workflow `.github/workflows/ios.yml` builds an unsigned app on a macOS runner and uploads the `.app` bundle as an artifact. An unsigned build is not directly installable on an iPhone; signing/provisioning is required for installation.
